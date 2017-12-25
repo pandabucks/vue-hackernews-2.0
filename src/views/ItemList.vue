@@ -80,6 +80,7 @@ export default {
   methods: {
     loadItems (to = this.page, from = -1) {
       this.$bar.start()
+      // dispatchをこういう使い方をしているけど、この定数FETCH_LIST_DATAはどこで定義されているんだろう。。
       this.$store.dispatch('FETCH_LIST_DATA', {
         type: this.type
       }).then(() => {

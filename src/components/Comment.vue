@@ -5,7 +5,9 @@
       {{ comment.time | timeAgo }} ago
     </div>
     <div class="text" v-html="comment.text"></div>
+    <!-- toggleでコメントを表示、非表示にしている -->
     <div class="toggle" :class="{ open }" v-if="comment.kids && comment.kids.length">
+      <!--@clicj= open = !openでtrue <> falseを入れ替えるようにしている -->
       <a @click="open = !open">{{
         open
             ? '[-]'
@@ -24,6 +26,7 @@ export default {
   props: ['id'],
   data () {
     return {
+      // 他のcomponentで参照使用にないものは、単一コンポーネント内のdata属性に定義してもいいんだ！
       open: true
     }
   },

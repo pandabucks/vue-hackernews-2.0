@@ -13,6 +13,7 @@ export function createRouter () {
     mode: 'history',
     fallback: false,
     scrollBehavior: () => ({ y: 0 }),
+    // routes以下、普通に1行描きの方が見やすいなぁ。
     routes: [
       { path: '/top/:page(\\d+)?', component: createListView('top') },
       { path: '/new/:page(\\d+)?', component: createListView('new') },

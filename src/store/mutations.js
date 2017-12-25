@@ -1,5 +1,6 @@
 import Vue from 'vue'
 
+// 利用される側で定義するexport default
 export default {
   SET_ACTIVE_TYPE: (state, { type }) => {
     state.activeType = type
@@ -9,6 +10,7 @@ export default {
     state.lists[type] = ids
   },
 
+  // ここでSET_ITEMSをしているから、mutationsでデータの更新をしている？
   SET_ITEMS: (state, { items }) => {
     items.forEach(item => {
       if (item) {
