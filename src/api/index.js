@@ -1,4 +1,5 @@
 // this is aliased in webpack config based on server/client build
+// ここにAPI通信を行うものが全部書かれていて、これはactionから呼ばれるのかな。
 import { createAPI } from 'create-api'
 
 const logRequests = !!process.env.DEBUG_API
@@ -51,6 +52,7 @@ export function fetchItem (id) {
   return fetch(`item/${id}`)
 }
 
+// fetchItemsがここで定義されている。
 export function fetchItems (ids) {
   return Promise.all(ids.map(id => fetchItem(id)))
 }

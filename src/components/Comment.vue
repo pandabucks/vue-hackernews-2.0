@@ -30,6 +30,7 @@ export default {
       open: true
     }
   },
+  // computedから、取得していいのかな。
   computed: {
     comment () {
       return this.$store.state.items[this.id]

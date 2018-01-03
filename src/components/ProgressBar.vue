@@ -13,6 +13,7 @@
 export default {
   data () {
     return {
+      // componet内でしか使われないデータは、stateに書かなくても良い感じ。
       percent: 0,
       show: false,
       canSuccess: true,

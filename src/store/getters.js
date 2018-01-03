@@ -1,6 +1,7 @@
 export default {
   // ids of the items that should be currently displayed based on
   // current list type and current pagination
+  // gettersで、データの読み込みを行うやつ。
   activeIds (state) {
     const { activeType, itemsPerPage, lists } = state
 

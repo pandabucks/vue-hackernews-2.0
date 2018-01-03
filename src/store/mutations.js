@@ -1,16 +1,17 @@
 import Vue from 'vue'
 
-// 利用される側で定義するexport default
+// mutationはcommit経由で呼ばれて、stateのデータを編集する。
 export default {
   SET_ACTIVE_TYPE: (state, { type }) => {
     state.activeType = type
   },
 
+  // stateのlistsにデータを格納するmutationなのである。
   SET_LIST: (state, { type, ids }) => {
     state.lists[type] = ids
   },
 
-  // ここでSET_ITEMSをしているから、mutationsでデータの更新をしている？
+  // ここでSET_ITEMSをしているから、mutationsでデータの更新をしている
   SET_ITEMS: (state, { items }) => {
     items.forEach(item => {
       if (item) {
